@@ -7,3 +7,11 @@ Reason: missed alternate case for swaps (missed observation)
 ** USACO :: Promotion Counting
 Solo solved? : No
 Reason: Missed observation (algebraic treatment of counts / promotions)
+
+** USACO :: Mowing
+Solo solved? Pretty much yes
+Reason: Messed up loop granularity / sim logic
+
+** USACO :: Censoring
+Solo solved? Yes, easily
+Method: heuristic of erasing the string, then moving cursor back at most the found pos - removed string length
