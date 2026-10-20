@@ -1,17 +1,76 @@
 #+TITLE: CP Problem Log
 
-** USACO Shell Game
-Solved solo: almost
-Reason: missed alternate case for swaps (missed observation)
+** USACO :: Shell Game                                          :observation:
+:PROPERTIES:
+:RESULT:   almost
+:TIME:
+:FELT:
+:RETRY:
+:END:
+- Insight ::
+- Cue ::
+- Mistake :: Missed alternate case for swaps.
 
-** USACO :: Promotion Counting
-Solo solved? : No
-Reason: Missed observation (algebraic treatment of counts / promotions)
+** USACO :: Promotion Counting                                  :observation:
+:PROPERTIES:
+:RESULT:
+:TIME:
+:FELT:
+:RETRY:
+:END:
+- Insight :: Algebraic treatment of counts / promotions.
+- Cue ::
+- Mistake :: Missed the observation above.
 
-** USACO :: Mowing
-Solo solved? Pretty much yes
-Reason: Messed up loop granularity / sim logic
+** USACO :: Mowing                                                     :impl:
+:PROPERTIES:
+:RESULT:   almost
+:TIME:
+:FELT:
+:RETRY:
+:END:
+- Insight ::
+- Cue ::
+- Mistake :: Messed up loop granularity / sim logic.
 
 ** USACO :: Censoring
-Solo solved? Yes, easily
-Method: heuristic of erasing the string, then moving cursor back at most the found pos - removed string length
+:PROPERTIES:
+:RESULT:   solo
+:TIME:
+:FELT:
+:END:
+- Insight :: Erase the found string, then move the cursor back by at most found pos minus removed string length.
+- Cue ::
+- Mistake ::
+
+** USACO :: Cow Genomics                                              ::topic:
+:PROPERTIES:
+:RESULT:solo
+:TIME:     10m
+:FELT:2
+:RETRY:    <2026-10-26>
+:END:
+- Insight :: Check for disjointness on each genome between plain and spotted
+- Cue :: Example made it clear
+- Mistake 
+
+** USACO :: Triangles                                                 :observation:topic:
+:PROPERTIES:
+:RESULT:editorial
+:TIME:     20mm
+:FELT:2
+:RETRY:    <2026-10-26>
+:END:
+- Insight :: Search ALL triplets and check only those that have a right angle
+- Cue :: 
+- Mistake :: Was searching monotonic triplets and skipping potential matches. Also missed reduction to just right angle check
+** USACO :: Cows Cross Road 2                                         :impl:topic:
+:PROPERTIES:
+:RESULT:almost
+:TIME:     30m
+:FELT:3
+:RETRY:    <2026-10-26>
+:END:
+- Insight :: Can check cows between start cnd end points of one letter and if one is only encountered once, they cross
+- Cue :: 
+- Mistake :: None really, just pursued less efficient path initially, with string::find instead of an array tracking starts

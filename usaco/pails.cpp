@@ -8,7 +8,19 @@ using namespace std;
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
-    GET_IO("measurement");
-    int N{};
-    in >> N;
+    GET_IO("pails");
+    int X, Y, M;
+    in >> X >> Y >> M;
+    int maxX = M / X;
+    int maxY = M / Y;
+    int result{};
+    for (int i{}; i <= maxX; ++i) {
+        int m{i * X};
+        for (int j{}; j <= maxY; ++j) {
+            if (m + Y <= M) m += Y;
+            else break;
+        }
+        result = max(m, result);
+    }
+    out << result << '\n';
 }
