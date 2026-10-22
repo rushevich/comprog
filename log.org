@@ -74,3 +74,24 @@
 - Insight :: Can check cows between start cnd end points of one letter and if one is only encountered once, they cross
 - Cue :: 
 - Mistake :: None really, just pursued less efficient path initially, with string::find instead of an array tracking starts
+** USACO :: Cow Guessing                                              :observation:topic:
+:PROPERTIES:
+:RESULT:hint
+:TIME:     40m
+:FELT:4
+:RETRY:    <2026-10-27>
+:END:
+- Insight :: The max amount of questions you can ask before reaching a one guess situation is the max amount of overlapping traits between a pair of animals
+- Cue :: Pure insight
+- Mistake :: Overcomplicated problem instead of seeking reduction
+
+** USACO :: Cow Genomics - Silver                                     :misread:topic:
+:PROPERTIES:
+:RESULT:solo
+:TIME:     20m
+:FELT:2
+:RETRY:    <2026-10-27>
+:END:
+- Insight :: Just cow genomics bronze but instead you check 3 long strings
+- Cue :: 
+- Mistake :: Instructions were kind of unclear, but then again leaving it up for interpretation challenges how you can potentially disambiguate the genomes.
