@@ -105,3 +105,13 @@
 - Insight :: The search space is small enough to try every translation. Both pieces' shifts depend on each other, so search them jointly.
 - Cue :: Constraints, problem set
 - Mistake :: Gluing it together. Forgot to read input, compared int to '1', loop vars not reset, `good` declared per row instead of per combination.
+** USACO :: Load Balancing Silver                                     :technique:complete_search:
+:PROPERTIES:
+:RESULT:almost
+:TIME:     60m
+:FELT:3
+:RETRY:    <2026-10-30>
+:END:
+- Insight :: the possible rays are encoded in the cow points themselves. Sort by y and walk the points to update quadrants directly instead of formally placing rays and recounting.
+- Cue :: look for if doing extra work, and how you can do this work just once
+- Mistake :: 

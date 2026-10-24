@@ -18,19 +18,36 @@ int main() {
     };
 
     set<int> xRays; // sorted
-    set<int> yRays;
     vector<Point> pts(N);
     for (auto& p : pts) {
         cin >> p.x >> p.y;
         xRays.insert(p.x + 1);
-        yRays.insert(p.y + 1);
     }
-
+    sort(pts.begin(), pts.end(), [](const auto& a, const auto& b) { return a.y < b.y; });
     int M{INT_MAX};
     for (auto a : xRays) {
         array<int, 4> quadrants{};
-        int i{};
-        for (auto b : yRays) { array }
+        // 0 1
+        // 2 3
+        for (const auto& [x, y] : pts) {
+            if (x < a) ++quadrants[0];
+            else ++quadrants[1];
+        }
+        int cowIdx{};
+        while (cowIdx < N) {
+            int curY{pts[cowIdx].y};
+            while (cowIdx < N && pts[cowIdx].y == curY) {
+                if (pts[cowIdx].x < a) {
+                    --quadrants[0];
+                    ++quadrants[2];
+                } else {
+                    --quadrants[1];
+                    ++quadrants[3];
+                }
+                ++cowIdx;
+            }
+            M = min(M, *max_element(quadrants.begin(), quadrants.end()));
+        }
     }
     cout << M << '\n';
 }
