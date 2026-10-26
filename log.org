@@ -115,3 +115,53 @@
 - Insight :: the possible rays are encoded in the cow points themselves. Sort by y and walk the points to update quadrants directly instead of formally placing rays and recounting.
 - Cue :: look for if doing extra work, and how you can do this work just once
 - Mistake :: 
+** USACO :: Livestock Lineup                                          :clean:complete_search:
+:PROPERTIES:
+:RESULT:solo
+:TIME:     20m
+:FELT:1
+:RETRY:    <2026-10-31>
+:END:
+- Insight :: Easy permutation
+- Cue :: 
+- Mistake :: Overcomplicated it
+** USACO :: Back and Forth                                            :clean:complete_search:
+:PROPERTIES:
+:RESULT:almost
+:TIME:     30m
+:FELT:1
+:RETRY:    <2026-11-01>
+:END:
+- Insight :: small search space, do so and simulate the changes. also, state depends on parity of iteration
+- Cue :: 
+- Mistake :: impl issues (loop end index, accidentally modify writing to function arguement instead of just modifying for next iter)
+** CCC :: Twenty Four                                                 :impl:complete_search:
+:PROPERTIES:
+:RESULT:almost
+:TIME:     60m
+:FELT:2
+:RETRY:    <2026-11-01>
+:END:
+- Insight :: The result can be interpreted as one of two cases of parenthesization. You just try all the operations for every permutation.
+- Cue :: Small search space
+- Mistake :: Mis-implemented. Incorrect structure
+** CSES :: Beautiful Permutations 2                                   :impl:complete_search:
+:PROPERTIES:
+:RESULT:almost
+:TIME:     30m
+:FELT:2
+:RETRY:    <2026-11-01>
+:END:
+- Insight :: Doing the recursion by construction is the easiest way. Also, the difference maker between TLE and non-tle is continuously cutting down your search space by erasing from the vector. Furthermore, it is optimal to iterate and sort the vector backwards, since erasure displaces elements
+- Cue :: 
+- Mistake :: Implementation was off. Used next_perm because initially doubted the by-construction approach. 
+** CF :: Three Logos                                                  :impl:complete_search:
+:PROPERTIES:
+:RESULT:guided
+:TIME:     60+m
+:FELT:4
+:RETRY:    <2026-11-01>
+:END:
+- Insight :: You only care about the rotations of two of the logos, and there are only 2 potential orientations to test (stacked horizontally vs vertically in remaining space)
+- Cue :: Thinking about this and fixing one of them makes it clear
+- Mistake :: Impl was tricky for me, poor spatial reasoning.
