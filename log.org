@@ -165,3 +165,23 @@
 - Insight :: You only care about the rotations of two of the logos, and there are only 2 potential orientations to test (stacked horizontally vs vertically in remaining space)
 - Cue :: Thinking about this and fixing one of them makes it clear
 - Mistake :: Impl was tricky for me, poor spatial reasoning.
+** CF :: 1130 Div 2 - Swap for k-th Largest Prefix MEX               :impl:complete_search:
+:PROPERTIES:
+:RESULT:   upsolved
+:TIME: 60m
+:FELT: 4
+:RETRY:
+:END:
+- Insight :: N and K were small, so try every swap. Best possible k-th largest is n-k+1 since f_i <= i.
+- Cue :: Constraints (sum of n <= 100)
+- Mistake :: Data structure selection and mex computation. Recomputed mex from scratch, mixed up master and scratch sets, printed "0 0" instead of -1.
+** CF :: 1130 Div 2 - Frog Jumps on 2xN Grid                          :observation:
+:PROPERTIES:
+:RESULT:   upsolved
+:TIME: 30m
+:FELT: 3
+:RETRY:
+:END:
+- Insight :: Only an odd # of frogs makes the grid non-jumpable, so k = count % 2.
+- Cue :: Think through more example cases and seek an underlying rule rather than trying my heuristic.
+- Mistake :: Didn't see the simplicity. Greedy neighbor pairing with illegal wraparound.
