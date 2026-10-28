@@ -185,3 +185,23 @@
 - Insight :: Only an odd # of frogs makes the grid non-jumpable, so k = count % 2.
 - Cue :: Think through more example cases and seek an underlying rule rather than trying my heuristic.
 - Mistake :: Didn't see the simplicity. Greedy neighbor pairing with illegal wraparound.
+** USACO :: Why Did the Cow Cross the Road III                        :clean:sorting:
+:PROPERTIES:
+:RESULT:solo
+:TIME:     10m
+:FELT:1
+:RETRY:    <2026-11-04>
+:END:
+- Insight :: Consider the total time spent processing the cows, ~T = t_processing + t_waiting~. The processing time is fixed and each cow’s processing cannot change. So we minimize the t_waiting. The only way to do so is to choose the first cow that is ready at every moment.
+- Cue :: Just simple
+- Mistake :: N/A
+** USACO :: Cow College                                               :clean:sorting:
+:PROPERTIES:
+:RESULT: solo
+:TIME:     10m
+:FELT:1
+:RETRY:    <2026-11-04>
+:END:
+- Insight :: When you sort the prices, you can find the most profitable price in one pass when you consider that the profit of ~a[i]~ is simply that price multiplied by the number of elements ahead of it, including that element. (~a[i] * (N-i)~) 
+- Cue :: Simple
+- Mistake :: N/A
