@@ -205,3 +205,13 @@
 - Insight :: When you sort the prices, you can find the most profitable price in one pass when you consider that the profit of ~a[i]~ is simply that price multiplied by the number of elements ahead of it, including that element. (~a[i] * (N-i)~) 
 - Cue :: Simple
 - Mistake :: N/A
+** CF :: Jury Marks                                                   :clean:brute_force:implementation:maps:prefix:
+:PROPERTIES:
+:RESULT:   solo
+:TIME:     20m
+:FELT: 3
+:RETRY:    <2026-11-12>
+:END:
+- Insight :: You have to try considering some remembered value as occurring after every mark and then count the possible starts as a result, and see if the number coincides with the number of recalled values. If there are ~r~ recalled values, and some possible start is reachable from ~r~ recalled values, that means that this possible start is valid and all recalled values coincide with this.
+- Cue :: 
+- Mistake :: None
