@@ -1,0 +1,13 @@
+#+TITLE: Notes on Greedy Algorithms
+
+** In a nutshell:
+Greedy algorithms rely on making what appears to be the best choice at every step / iteration of the algorithm (a "locally optimal" choice) and then relying on this *locally optimal* choice selection manifesting as the globally optimal solution.
+
+Greedy algorithms have some pros and cons.
+Pros:
+- Usually simple to implement as there is one "choice" in each step
+- Usually efficient since a greedy algorithm constructs the right answer step-by-step (locally optimal -> globally optimal)
+
+Cons:
+- It is usually hard to prove the correctness of a greedy algorithm. In particular, it’s hard to translate the locally optimal choice to the globally optimal structure
+- 

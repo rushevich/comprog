@@ -1,1 +1,8 @@
-/home/george/projects/comp_prog/compile_flags.txt
+-std=c++17
+-Wall
+-Wextra
+-Wshadow
+-Wconversion
+-Wfloat-equal
+-Wduplicated-cond
+-Wlogical-op

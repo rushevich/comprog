@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+set -e
+
+SOURCE_FILE="$1"
+INPUT="$2"
+
+g++ -std=c++17 "$SOURCE_FILE" -o test && ./test <<< "$2" && rm test
