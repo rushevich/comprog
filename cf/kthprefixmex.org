@@ -1,0 +1,15 @@
+#+TITLE: CF :: 1130 Div 2 - Swap for k-th Largest Prefix MEX
+[[file:../log.org::*CF :: 1130 Div 2 - Swap for k-th Largest Prefix MEX][log entry]]
+
+* Explanation
+# The solution in your own words, written after closing the editorial.
+
+* Insight
+N and K were small, so try every swap. Best possible k-th largest is n-k+1 since f_i <= i.
+
+* Cue
+# What in the statement should have pointed you here.
+Constraints (sum of n <= 100)
+
+* Mistake
+Data structure selection and mex computation. Recomputed mex from scratch, mixed up master and scratch sets, printed "0 0" instead of -1.

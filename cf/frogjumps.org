@@ -1,0 +1,15 @@
+#+TITLE: CF :: 1130 Div 2 - Frog Jumps on 2xN Grid
+[[file:../log.org::*CF :: 1130 Div 2 - Frog Jumps on 2xN Grid][log entry]]
+
+* Explanation
+# The solution in your own words, written after closing the editorial.
+
+* Insight
+Only an odd # of frogs makes the grid non-jumpable, so k = count % 2.
+
+* Cue
+# What in the statement should have pointed you here.
+Think through more example cases and seek an underlying rule rather than trying my heuristic.
+
+* Mistake
+Didn't see the simplicity. Greedy neighbor pairing with illegal wraparound.

@@ -1,0 +1,15 @@
+#+TITLE: CSES :: Beautiful Permutations 2
+[[file:../log.org::*CSES :: Beautiful Permutations 2][log entry]] | [[file:beautifulpermutation.cpp][solution]]
+
+* Explanation
+# The solution in your own words, written after closing the editorial.
+
+* Insight
+Doing the recursion by construction is the easiest way. Also, the difference maker between TLE and non-tle is continuously cutting down your search space by erasing from the vector. Furthermore, it is optimal to iterate and sort the vector backwards, since erasure displaces elements
+
+* Cue
+# What in the statement should have pointed you here.
+
+
+* Mistake
+Implementation was off. Used next_perm because initially doubted the by-construction approach.

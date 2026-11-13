@@ -1,0 +1,32 @@
+#+TITLE: Techniques & Patterns
+# Ideas that transfer between problems. Each entry: the pattern, the cue that
+# should trigger it, and the problems that taught it. This is the file worth
+# turning into SRS cards (org-fc / org-drill) later, not individual problems.
+# Topic deep-dives (e.g. [[file:greedy.org][greedy]]) stay in their own files.
+
+* Complete search
+** Small constraints mean try everything
+- Cue :: N tiny or sum of N tiny (<= ~100, permutations of <= 8 things).
+- Seen in :: [[file:../usaco/chinabull.org][Bull in a China Shop]], [[file:../ccc/twentyfour.org][Twenty Four]], [[file:../cf/threelogos.org][Three Logos]], [[file:../cf/kthprefixmex.org][Swap for k-th Prefix MEX]], [[file:../usaco/backandforth.org][Back and Forth]]
+** Candidates are encoded in the input
+- The only interesting cut points / rays / values are the input's own coordinates; walk them in sorted order and update incrementally instead of recounting.
+- Seen in :: [[file:../usaco/balancingsilver.org][Load Balancing Silver]]
+
+* Greedy
+** Place the forced choice as late as possible
+- When forced to cover a chain of dependencies, put the choice where it can still help later cells.
+- Seen in :: [[file:../usaco/astral.org][Astral Superposition]]
+** Serve whoever is ready first
+- Seen in :: [[file:../log.org::*USACO :: Why Did the Cow Cross the Road III][Cow Cross the Road III]]
+
+* Sorting
+** Sort, then one pass with a count of what remains
+- Seen in :: [[file:../log.org::*USACO :: Cow College][Cow College]]
+** Compare against the sorted array
+- Mismatched positions vs sorted order tell you how many moves/swaps are needed.
+- Seen in :: [[file:../usaco/outofplace.org][Out of Place]]
+
+* Observation / reduction
+** Look for an invariant before simulating
+- Parity, counts, or a max over pairs often collapses the whole problem.
+- Seen in :: [[file:../cf/frogjumps.org][Frog Jumps]], [[file:../usaco/guessanimal.org][Cow Guessing]], [[file:../usaco/triangles.org][Triangles]]

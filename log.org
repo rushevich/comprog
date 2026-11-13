@@ -1,37 +1,35 @@
 #+TITLE: CP Problem Log
+#+STARTUP: overview
+# This log is an index only. The actual notes per problem are alongside the code with a .org extension.
+# SCHEDULED = next retry; this file in org-agenda-files makes the agenda the review queue.
+# Patterns that transfer between problems go in notes/techniques.org.
 
-** USACO :: Shell Game                                          :observation:
+** USACO :: Shell Game                                                 :observation:
+SCHEDULED: <2026-11-22 Sun>
 :PROPERTIES:
 :RESULT:   almost
 :TIME:
 :FELT:
-:RETRY:
 :END:
-- Insight ::
-- Cue ::
-- Mistake :: Missed alternate case for swaps.
+[[file:usaco/shellgame.org][notes]] | [[file:usaco/shellgame.cpp][code]]
 
-** USACO :: Promotion Counting                                  :observation:
+** USACO :: Promotion Counting                                         :observation:
+SCHEDULED: <2026-11-23 Mon>
 :PROPERTIES:
 :RESULT:
 :TIME:
 :FELT:
-:RETRY:
 :END:
-- Insight :: Algebraic treatment of counts / promotions.
-- Cue ::
-- Mistake :: Missed the observation above.
+[[file:usaco/promotion.org][notes]] | [[file:usaco/promotion.cpp][code]]
 
 ** USACO :: Mowing                                                     :impl:
+SCHEDULED: <2026-11-24 Tue>
 :PROPERTIES:
 :RESULT:   almost
 :TIME:
 :FELT:
-:RETRY:
 :END:
-- Insight ::
-- Cue ::
-- Mistake :: Messed up loop granularity / sim logic.
+[[file:usaco/mowing.org][notes]] | [[file:usaco/mowing.cpp][code]]
 
 ** USACO :: Censoring
 :PROPERTIES:
@@ -39,189 +37,176 @@
 :TIME:
 :FELT:
 :END:
+[[file:usaco/censoring.cpp][code]]
 - Insight :: Erase the found string, then move the cursor back by at most found pos minus removed string length.
-- Cue ::
-- Mistake ::
 
-** USACO :: Cow Genomics                                              ::topic:
+** USACO :: Cow Genomics                                               :topic:
 :PROPERTIES:
-:RESULT:solo
+:RESULT:   solo
 :TIME:     10m
-:FELT:2
-:RETRY:    <2026-10-26>
+:FELT:     2
 :END:
+[[file:usaco/cownomics.cpp][code]]
 - Insight :: Check for disjointness on each genome between plain and spotted
-- Cue :: Example made it clear
-- Mistake 
 
-** USACO :: Triangles                                                 :observation:topic:
+** USACO :: Triangles                                                  :observation:topic:
+SCHEDULED: <2026-11-14 Sat>
 :PROPERTIES:
-:RESULT:editorial
+:RESULT:   editorial
 :TIME:     20mm
-:FELT:2
-:RETRY:    <2026-10-26>
+:FELT:     2
 :END:
-- Insight :: Search ALL triplets and check only those that have a right angle
-- Cue :: 
-- Mistake :: Was searching monotonic triplets and skipping potential matches. Also missed reduction to just right angle check
-** USACO :: Cows Cross Road 2                                         :impl:topic:
-:PROPERTIES:
-:RESULT:almost
-:TIME:     30m
-:FELT:3
-:RETRY:    <2026-10-26>
-:END:
-- Insight :: Can check cows between start cnd end points of one letter and if one is only encountered once, they cross
-- Cue :: 
-- Mistake :: None really, just pursued less efficient path initially, with string::find instead of an array tracking starts
-** USACO :: Cow Guessing                                              :observation:topic:
-:PROPERTIES:
-:RESULT:hint
-:TIME:     40m
-:FELT:4
-:RETRY:    <2026-10-27>
-:END:
-- Insight :: The max amount of questions you can ask before reaching a one guess situation is the max amount of overlapping traits between a pair of animals
-- Cue :: Pure insight
-- Mistake :: Overcomplicated problem instead of seeking reduction
+[[file:usaco/triangles.org][notes]] | [[file:usaco/triangles.cpp][code]]
 
-** USACO :: Cow Genomics - Silver                                     :misread:topic:
+** USACO :: Cows Cross Road 2                                          :impl:topic:
+SCHEDULED: <2026-11-25 Wed>
 :PROPERTIES:
-:RESULT:solo
-:TIME:     20m
-:FELT:2
-:RETRY:    <2026-10-27>
+:RESULT:   almost
+:TIME:     30m
+:FELT:     3
 :END:
+[[file:usaco/crossroad2.org][notes]] | [[file:usaco/crossroad2.cpp][code]]
+
+** USACO :: Cow Guessing                                               :observation:topic:
+SCHEDULED: <2026-11-19 Thu>
+:PROPERTIES:
+:RESULT:   hint
+:TIME:     40m
+:FELT:     4
+:END:
+[[file:usaco/guessanimal.org][notes]] | [[file:usaco/guessanimal.cpp][code]]
+
+** USACO :: Cow Genomics - Silver                                      :misread:topic:
+:PROPERTIES:
+:RESULT:   solo
+:TIME:     20m
+:FELT:     2
+:END:
+[[file:usaco/cownomicssilver.cpp][code]]
 - Insight :: Just cow genomics bronze but instead you check 3 long strings
-- Cue :: 
-- Mistake :: Instructions were kind of unclear, but then again leaving it up for interpretation challenges how you can potentially disambiguate the genomes.
-** USACO :: Bull in a China Shop                                      :impl:complete_search:
+
+** USACO :: Bull in a China Shop                                       :impl:complete_search:
+SCHEDULED: <2026-11-15 Sun>
 :PROPERTIES:
 :RESULT:   guided
 :TIME:     60m
 :FELT:     4
-:RETRY:    <2026-10-29>
 :END:
-- Insight :: The search space is small enough to try every translation. Both pieces' shifts depend on each other, so search them jointly.
-- Cue :: Constraints, problem set
-- Mistake :: Gluing it together. Forgot to read input, compared int to '1', loop vars not reset, `good` declared per row instead of per combination.
-** USACO :: Load Balancing Silver                                     :technique:complete_search:
+[[file:usaco/chinabull.org][notes]] | [[file:usaco/chinabull.cpp][code]]
+
+** USACO :: Load Balancing Silver                                      :technique:complete_search:
+SCHEDULED: <2026-11-26 Thu>
 :PROPERTIES:
-:RESULT:almost
+:RESULT:   almost
 :TIME:     60m
-:FELT:3
-:RETRY:    <2026-10-30>
+:FELT:     3
 :END:
-- Insight :: the possible rays are encoded in the cow points themselves. Sort by y and walk the points to update quadrants directly instead of formally placing rays and recounting.
-- Cue :: look for if doing extra work, and how you can do this work just once
-- Mistake :: 
-** USACO :: Livestock Lineup                                          :clean:complete_search:
-:PROPERTIES:
-:RESULT:solo
-:TIME:     20m
-:FELT:1
-:RETRY:    <2026-10-31>
-:END:
-- Insight :: Easy permutation
-- Cue :: 
-- Mistake :: Overcomplicated it
-** USACO :: Back and Forth                                            :clean:complete_search:
-:PROPERTIES:
-:RESULT:almost
-:TIME:     30m
-:FELT:1
-:RETRY:    <2026-11-01>
-:END:
-- Insight :: small search space, do so and simulate the changes. also, state depends on parity of iteration
-- Cue :: 
-- Mistake :: impl issues (loop end index, accidentally modify writing to function arguement instead of just modifying for next iter)
-** CCC :: Twenty Four                                                 :impl:complete_search:
-:PROPERTIES:
-:RESULT:almost
-:TIME:     60m
-:FELT:2
-:RETRY:    <2026-11-01>
-:END:
-- Insight :: The result can be interpreted as one of two cases of parenthesization. You just try all the operations for every permutation.
-- Cue :: Small search space
-- Mistake :: Mis-implemented. Incorrect structure
-** CSES :: Beautiful Permutations 2                                   :impl:complete_search:
-:PROPERTIES:
-:RESULT:almost
-:TIME:     30m
-:FELT:2
-:RETRY:    <2026-11-01>
-:END:
-- Insight :: Doing the recursion by construction is the easiest way. Also, the difference maker between TLE and non-tle is continuously cutting down your search space by erasing from the vector. Furthermore, it is optimal to iterate and sort the vector backwards, since erasure displaces elements
-- Cue :: 
-- Mistake :: Implementation was off. Used next_perm because initially doubted the by-construction approach. 
-** CF :: Three Logos                                                  :impl:complete_search:
-:PROPERTIES:
-:RESULT:guided
-:TIME:     60+m
-:FELT:4
-:RETRY:    <2026-11-01>
-:END:
-- Insight :: You only care about the rotations of two of the logos, and there are only 2 potential orientations to test (stacked horizontally vs vertically in remaining space)
-- Cue :: Thinking about this and fixing one of them makes it clear
-- Mistake :: Impl was tricky for me, poor spatial reasoning.
-** CF :: 1130 Div 2 - Swap for k-th Largest Prefix MEX               :impl:complete_search:
-:PROPERTIES:
-:RESULT:   upsolved
-:TIME: 60m
-:FELT: 4
-:RETRY:
-:END:
-- Insight :: N and K were small, so try every swap. Best possible k-th largest is n-k+1 since f_i <= i.
-- Cue :: Constraints (sum of n <= 100)
-- Mistake :: Data structure selection and mex computation. Recomputed mex from scratch, mixed up master and scratch sets, printed "0 0" instead of -1.
-** CF :: 1130 Div 2 - Frog Jumps on 2xN Grid                          :observation:
-:PROPERTIES:
-:RESULT:   upsolved
-:TIME: 30m
-:FELT: 3
-:RETRY:
-:END:
-- Insight :: Only an odd # of frogs makes the grid non-jumpable, so k = count % 2.
-- Cue :: Think through more example cases and seek an underlying rule rather than trying my heuristic.
-- Mistake :: Didn't see the simplicity. Greedy neighbor pairing with illegal wraparound.
-** USACO :: Why Did the Cow Cross the Road III                        :clean:sorting:
-:PROPERTIES:
-:RESULT:solo
-:TIME:     10m
-:FELT:1
-:RETRY:    <2026-11-04>
-:END:
-- Insight :: Consider the total time spent processing the cows, ~T = t_processing + t_waiting~. The processing time is fixed and each cow’s processing cannot change. So we minimize the t_waiting. The only way to do so is to choose the first cow that is ready at every moment.
-- Cue :: Just simple
-- Mistake :: N/A
-** USACO :: Cow College                                               :clean:sorting:
-:PROPERTIES:
-:RESULT: solo
-:TIME:     10m
-:FELT:1
-:RETRY:    <2026-11-04>
-:END:
-- Insight :: When you sort the prices, you can find the most profitable price in one pass when you consider that the profit of ~a[i]~ is simply that price multiplied by the number of elements ahead of it, including that element. (~a[i] * (N-i)~) 
-- Cue :: Simple
-- Mistake :: N/A
-** CF :: Jury Marks                                                   :clean:brute_force:implementation:maps:prefix:
+[[file:usaco/balancingsilver.org][notes]] | [[file:usaco/balancingsilver.cpp][code]]
+
+** USACO :: Livestock Lineup                                           :clean:complete_search:
 :PROPERTIES:
 :RESULT:   solo
 :TIME:     20m
-:FELT: 3
-:RETRY:    <2026-11-12>
+:FELT:     1
 :END:
-- Insight :: You have to try considering some remembered value as occurring after every mark and then count the possible starts as a result, and see if the number coincides with the number of recalled values. If there are ~r~ recalled values, and some possible start is reachable from ~r~ recalled values, that means that this possible start is valid and all recalled values coincide with this.
-- Cue :: 
-- Mistake :: None
-** USACO :: Out of Place                                              :technique:greedy:
+[[file:usaco/livestocklineup.cpp][code]]
+- Insight :: Easy permutation
+
+** USACO :: Back and Forth                                             :clean:complete_search:
+SCHEDULED: <2026-11-27 Fri>
 :PROPERTIES:
-:RESULT:editorial
+:RESULT:   almost
 :TIME:     30m
-:FELT:2
-:RETRY:    <2026-11-19>
+:FELT:     1
 :END:
-- Insight :: Compare the original arrangement (sorted of input) to the input. Given K differing elements between them, you need K-1 swaps exactly to return to the original arrangement.
-- Cue :: 
-- Mistake :: 
+[[file:usaco/backandforth.org][notes]] | [[file:usaco/backandforth.cpp][code]]
+
+** CCC :: Twenty Four                                                  :impl:complete_search:
+SCHEDULED: <2026-11-28 Sat>
+:PROPERTIES:
+:RESULT:   almost
+:TIME:     60m
+:FELT:     2
+:END:
+[[file:ccc/twentyfour.org][notes]] | [[file:ccc/twentyfour.cpp][code]]
+
+** CSES :: Beautiful Permutations 2                                    :impl:complete_search:
+SCHEDULED: <2026-11-29 Sun>
+:PROPERTIES:
+:RESULT:   almost
+:TIME:     30m
+:FELT:     2
+:END:
+[[file:cses/beautifulpermutation.org][notes]] | [[file:cses/beautifulpermutation.cpp][code]]
+
+** CF :: Three Logos                                                   :impl:complete_search:
+SCHEDULED: <2026-11-16 Mon>
+:PROPERTIES:
+:RESULT:   guided
+:TIME:     60+m
+:FELT:     4
+:END:
+[[file:cf/threelogos.org][notes]] | [[file:cf/threelogos.cpp][code]]
+
+** CF :: 1130 Div 2 - Swap for k-th Largest Prefix MEX                 :impl:complete_search:
+SCHEDULED: <2026-11-20 Fri>
+:PROPERTIES:
+:RESULT:   upsolved
+:TIME:     60m
+:FELT:     4
+:END:
+[[file:cf/kthprefixmex.org][notes]]
+
+** CF :: 1130 Div 2 - Frog Jumps on 2xN Grid                           :observation:
+SCHEDULED: <2026-11-21 Sat>
+:PROPERTIES:
+:RESULT:   upsolved
+:TIME:     30m
+:FELT:     3
+:END:
+[[file:cf/frogjumps.org][notes]]
+
+** USACO :: Why Did the Cow Cross the Road III                         :clean:sorting:
+:PROPERTIES:
+:RESULT:   solo
+:TIME:     10m
+:FELT:     1
+:END:
+[[file:usaco/cowscrossing3.cpp][code]]
+- Insight :: Consider the total time spent processing the cows, ~T = t_processing + t_waiting~. The processing time is fixed and each cow’s processing cannot change. So we minimize the t_waiting. The only way to do so is to choose the first cow that is ready at every moment.
+
+** USACO :: Cow College                                                :clean:sorting:
+:PROPERTIES:
+:RESULT:   solo
+:TIME:     10m
+:FELT:     1
+:END:
+[[file:usaco/cowcollege.cpp][code]]
+- Insight :: When you sort the prices, you can find the most profitable price in one pass when you consider that the profit of ~a[i]~ is simply that price multiplied by the number of elements ahead of it, including that element. (~a[i] * (N-i)~)
+
+** CF :: Jury Marks                                                    :clean:brute_force:implementation:maps:prefix:
+:PROPERTIES:
+:RESULT:   solo
+:TIME:     20m
+:FELT:     3
+:END:
+[[file:cf/jurymarks.cpp][code]]
+- Insight :: You have to try considering some remembered value as occurring after every mark and then count the possible starts as a result, and see if the number coincides with the number of recalled values. If there are ~r~ recalled values, and some possible start is reachable from ~r~ recalled values, that means that this possible start is valid and all recalled values coincide with this.
+
+** USACO :: Out of Place                                               :technique:greedy:
+SCHEDULED: <2026-11-17 Tue>
+:PROPERTIES:
+:RESULT:   editorial
+:TIME:     30m
+:FELT:     2
+:END:
+[[file:usaco/outofplace.org][notes]] | [[file:usaco/outofplace.cpp][code]]
+
+** USACO :: Astral Superposition                                       :observation:greedy:
+SCHEDULED: <2026-11-18 Wed>
+:PROPERTIES:
+:RESULT:   editorial
+:TIME:
+:FELT:
+:END:
+[[file:usaco/astral.org][notes]] | [[file:usaco/astral.cpp][code]]

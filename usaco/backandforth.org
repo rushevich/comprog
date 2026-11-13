@@ -1,0 +1,15 @@
+#+TITLE: USACO :: Back and Forth
+[[file:../log.org::*USACO :: Back and Forth][log entry]] | [[file:backandforth.cpp][solution]]
+
+* Explanation
+# The solution in your own words, written after closing the editorial.
+
+* Insight
+small search space, do so and simulate the changes. also, state depends on parity of iteration
+
+* Cue
+# What in the statement should have pointed you here.
+
+
+* Mistake
+impl issues (loop end index, accidentally modify writing to function arguement instead of just modifying for next iter)

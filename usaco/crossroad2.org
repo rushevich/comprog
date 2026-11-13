@@ -1,0 +1,15 @@
+#+TITLE: USACO :: Cows Cross Road 2
+[[file:../log.org::*USACO :: Cows Cross Road 2][log entry]] | [[file:crossroad2.cpp][solution]]
+
+* Explanation
+# The solution in your own words, written after closing the editorial.
+
+* Insight
+Can check cows between start cnd end points of one letter and if one is only encountered once, they cross
+
+* Cue
+# What in the statement should have pointed you here.
+
+
+* Mistake
+None really, just pursued less efficient path initially, with string::find instead of an array tracking starts

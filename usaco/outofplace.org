@@ -1,0 +1,15 @@
+#+TITLE: USACO :: Out of Place
+[[file:../log.org::*USACO :: Out of Place][log entry]] | [[file:outofplace.cpp][solution]]
+
+* Explanation
+# The solution in your own words, written after closing the editorial.
+
+* Insight
+Compare the original arrangement (sorted of input) to the input. Given K differing elements between them, you need K-1 swaps exactly to return to the original arrangement.
+
+* Cue
+# What in the statement should have pointed you here.
+
+
+* Mistake
+

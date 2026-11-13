@@ -1,0 +1,15 @@
+#+TITLE: USACO :: Shell Game
+[[file:../log.org::*USACO :: Shell Game][log entry]] | [[file:shellgame.cpp][solution]]
+
+* Explanation
+# The solution in your own words, written after closing the editorial.
+
+* Insight
+
+
+* Cue
+# What in the statement should have pointed you here.
+
+
+* Mistake
+Missed alternate case for swaps.

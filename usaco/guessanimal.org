@@ -1,0 +1,15 @@
+#+TITLE: USACO :: Cow Guessing
+[[file:../log.org::*USACO :: Cow Guessing][log entry]] | [[file:guessanimal.cpp][solution]]
+
+* Explanation
+# The solution in your own words, written after closing the editorial.
+
+* Insight
+The max amount of questions you can ask before reaching a one guess situation is the max amount of overlapping traits between a pair of animals
+
+* Cue
+# What in the statement should have pointed you here.
+Pure insight
+
+* Mistake
+Overcomplicated problem instead of seeking reduction

@@ -1,0 +1,15 @@
+#+TITLE: USACO :: Astral Superposition
+[[file:../log.org::*USACO :: Astral Superposition][log entry]] | [[file:astral.cpp][solution]]
+
+* Explanation
+# The solution in your own words, written after closing the editorial.
+
+* Insight
+Stars can disappear, so gray means at least one star, not exactly one. Place stars forced by black pixels, then scan so each source comes before the cell it shifts onto; when a gray pixel is unexplained, put the star on the pixel itself (latest possible), never on the source.
+
+* Cue
+# What in the statement should have pointed you here.
+"Minimum" in the statement means the solution is not unique; reread what each color actually allows.
+
+* Mistake
+Assumed gray = exactly one. Scanned in reverse, so decisions were made before their dependencies; missed gray-with-white-source and black-onto-black cases.

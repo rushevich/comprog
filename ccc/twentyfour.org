@@ -1,0 +1,15 @@
+#+TITLE: CCC :: Twenty Four
+[[file:../log.org::*CCC :: Twenty Four][log entry]] | [[file:twentyfour.cpp][solution]]
+
+* Explanation
+# The solution in your own words, written after closing the editorial.
+
+* Insight
+The result can be interpreted as one of two cases of parenthesization. You just try all the operations for every permutation.
+
+* Cue
+# What in the statement should have pointed you here.
+Small search space
+
+* Mistake
+Mis-implemented. Incorrect structure

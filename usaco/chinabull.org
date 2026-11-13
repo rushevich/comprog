@@ -1,0 +1,15 @@
+#+TITLE: USACO :: Bull in a China Shop
+[[file:../log.org::*USACO :: Bull in a China Shop][log entry]] | [[file:chinabull.cpp][solution]]
+
+* Explanation
+# The solution in your own words, written after closing the editorial.
+
+* Insight
+The search space is small enough to try every translation. Both pieces' shifts depend on each other, so search them jointly.
+
+* Cue
+# What in the statement should have pointed you here.
+Constraints, problem set
+
+* Mistake
+Gluing it together. Forgot to read input, compared int to '1', loop vars not reset, `good` declared per row instead of per combination.

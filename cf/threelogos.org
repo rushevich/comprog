@@ -1,0 +1,15 @@
+#+TITLE: CF :: Three Logos
+[[file:../log.org::*CF :: Three Logos][log entry]] | [[file:threelogos.cpp][solution]]
+
+* Explanation
+# The solution in your own words, written after closing the editorial.
+
+* Insight
+You only care about the rotations of two of the logos, and there are only 2 potential orientations to test (stacked horizontally vs vertically in remaining space)
+
+* Cue
+# What in the statement should have pointed you here.
+Thinking about this and fixing one of them makes it clear
+
+* Mistake
+Impl was tricky for me, poor spatial reasoning.

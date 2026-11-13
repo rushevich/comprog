@@ -1,0 +1,15 @@
+#+TITLE: USACO :: Mowing
+[[file:../log.org::*USACO :: Mowing][log entry]] | [[file:mowing.cpp][solution]]
+
+* Explanation
+# The solution in your own words, written after closing the editorial.
+
+* Insight
+
+
+* Cue
+# What in the statement should have pointed you here.
+
+
+* Mistake
+Messed up loop granularity / sim logic.

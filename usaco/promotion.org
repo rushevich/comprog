@@ -1,0 +1,15 @@
+#+TITLE: USACO :: Promotion Counting
+[[file:../log.org::*USACO :: Promotion Counting][log entry]] | [[file:promotion.cpp][solution]]
+
+* Explanation
+# The solution in your own words, written after closing the editorial.
+
+* Insight
+Algebraic treatment of counts / promotions.
+
+* Cue
+# What in the statement should have pointed you here.
+
+
+* Mistake
+Missed the observation above.

@@ -1,0 +1,15 @@
+#+TITLE: USACO :: Load Balancing Silver
+[[file:../log.org::*USACO :: Load Balancing Silver][log entry]] | [[file:balancingsilver.cpp][solution]]
+
+* Explanation
+# The solution in your own words, written after closing the editorial.
+
+* Insight
+the possible rays are encoded in the cow points themselves. Sort by y and walk the points to update quadrants directly instead of formally placing rays and recounting.
+
+* Cue
+# What in the statement should have pointed you here.
+look for if doing extra work, and how you can do this work just once
+
+* Mistake
+

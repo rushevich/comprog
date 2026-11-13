@@ -1,0 +1,15 @@
+#+TITLE: USACO :: Triangles
+[[file:../log.org::*USACO :: Triangles][log entry]] | [[file:triangles.cpp][solution]]
+
+* Explanation
+# The solution in your own words, written after closing the editorial.
+
+* Insight
+Search ALL triplets and check only those that have a right angle
+
+* Cue
+# What in the statement should have pointed you here.
+
+
+* Mistake
+Was searching monotonic triplets and skipping potential matches. Also missed reduction to just right angle check
