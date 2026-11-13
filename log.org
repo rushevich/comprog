@@ -215,3 +215,13 @@
 - Insight :: You have to try considering some remembered value as occurring after every mark and then count the possible starts as a result, and see if the number coincides with the number of recalled values. If there are ~r~ recalled values, and some possible start is reachable from ~r~ recalled values, that means that this possible start is valid and all recalled values coincide with this.
 - Cue :: 
 - Mistake :: None
+** USACO :: Out of Place                                              :technique:greedy:
+:PROPERTIES:
+:RESULT:editorial
+:TIME:     30m
+:FELT:2
+:RETRY:    <2026-11-19>
+:END:
+- Insight :: Compare the original arrangement (sorted of input) to the input. Given K differing elements between them, you need K-1 swaps exactly to return to the original arrangement.
+- Cue :: 
+- Mistake :: 
