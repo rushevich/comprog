@@ -203,10 +203,13 @@ SCHEDULED: <2026-11-17 Tue>
 [[file:usaco/outofplace.org][notes]] | [[file:usaco/outofplace.cpp][code]]
 
 ** USACO :: Astral Superposition                                       :observation:greedy:
-SCHEDULED: <2026-11-18 Wed>
+SCHEDULED: <2026-11-21 Sat>
 :PROPERTIES:
 :RESULT:   editorial
 :TIME:
 :FELT:
+:END:
+:LOGBOOK:
+- Rescheduled from "[2026-11-18 Wed]" on [2026-11-17 Tue 10:29]
 :END:
 [[file:usaco/astral.org][notes]] | [[file:usaco/astral.cpp][code]]

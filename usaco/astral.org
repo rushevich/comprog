@@ -3,13 +3,15 @@
 
 * Explanation
 # The solution in your own words, written after closing the editorial.
-
+First process, the black pixels, since they impose definitive constraints on what other cells MUST have stars. In particular, a black pixel means that there must be 2 pixels in the original image, one at the position shifted back and one at the position itself. So we can go and mark all said pixels as having a star in one pass. Then in the next, we process whites and greys. If there is a white at some position, there are 2 situations to consider: there was no star there initially, so our tracking should reflect that, or there was a star at the backshifted position, and it dissapeared. If both are false, then there is no plausible arrangement. For greys, there are 3 cases to consider. One is that there has already been a star marked there, probably by some black star. In that case, we can just skip it, it’s already handled. Second case is that there’s a star in the backshifted position, in which case we can plausibly say this grey star is the result of that. The last case is where neither of these are true. In this case, we can make a greedy choice and say that there must be a star in this pixel. There is an exchange argument here, in that we can say mark that there’s a pixel at the backshifted position, however marking that there’s a pixel in the position itself is always just as good if not better, since doing so will both explain that pixel and some potential grey pixels that are offset from that one, whereas the former case would just satisfy the pixel itself.
 * Insight
 Stars can disappear, so gray means at least one star, not exactly one. Place stars forced by black pixels, then scan so each source comes before the cell it shifts onto; when a gray pixel is unexplained, put the star on the pixel itself (latest possible), never on the source.
 
 * Cue
 # What in the statement should have pointed you here.
 "Minimum" in the statement means the solution is not unique; reread what each color actually allows.
+
+Additionally, keeping in mind minimum and trying to make the choice that minimizes the final result at each step proves to actually be correct here.
 
 * Mistake
 Assumed gray = exactly one. Scanned in reverse, so decisions were made before their dependencies; missed gray-with-white-source and black-onto-black cases.
