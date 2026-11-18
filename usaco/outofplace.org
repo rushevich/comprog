@@ -3,13 +3,15 @@
 
 * Explanation
 # The solution in your own words, written after closing the editorial.
+When Bessie swaps herself out of place, we can compare that messed up array to the "golden", sorted array. Say there are ~k~ differences now, between the input array, and the actual sorted array. With every swap, we can put one cow in its correct position. However note, that when there are 2 differences remaining, this swap must put both of the cows in their correct location. If this swap were to put only one cow in its correct position, that means there would only be one difference now between the sorted array and the input array, but that is a contradiction since we have not changed any elements. Hence, to handle ~k-2~ of the differences, we can do exactly 1 swap for each of those. Then, for the last 2 differences, we just need 1 more swap. So, the total swaps needed is ~k-2+1=k-1~.
 
 * Insight
 Compare the original arrangement (sorted of input) to the input. Given K differing elements between them, you need K-1 swaps exactly to return to the original arrangement.
 
 * Cue
 # What in the statement should have pointed you here.
-
+Look at how the input changes compared to the sorted version.
 
 * Mistake
+Over complicated approach
 

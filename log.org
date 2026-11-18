@@ -50,11 +50,14 @@ SCHEDULED: <2026-11-24 Tue>
 - Insight :: Check for disjointness on each genome between plain and spotted
 
 ** USACO :: Triangles                                                  :observation:topic:
-SCHEDULED: <2026-11-14 Sat>
+SCHEDULED: <2026-11-22 Sun>
 :PROPERTIES:
 :RESULT:   editorial
 :TIME:     20mm
 :FELT:     2
+:END:
+:LOGBOOK:
+- Rescheduled from "[2026-11-14 Sat]" on [2026-11-17 Tue 23:53]
 :END:
 [[file:usaco/triangles.org][notes]] | [[file:usaco/triangles.cpp][code]]
 
@@ -86,11 +89,14 @@ SCHEDULED: <2026-11-19 Thu>
 - Insight :: Just cow genomics bronze but instead you check 3 long strings
 
 ** USACO :: Bull in a China Shop                                       :impl:complete_search:
-SCHEDULED: <2026-11-15 Sun>
+SCHEDULED: <2026-11-22 Sun>
 :PROPERTIES:
 :RESULT:   guided
 :TIME:     60m
 :FELT:     4
+:END:
+:LOGBOOK:
+- Rescheduled from "[2026-11-15 Sun]" on [2026-11-17 Tue 23:53]
 :END:
 [[file:usaco/chinabull.org][notes]] | [[file:usaco/chinabull.cpp][code]]
 
@@ -140,11 +146,14 @@ SCHEDULED: <2026-11-29 Sun>
 [[file:cses/beautifulpermutation.org][notes]] | [[file:cses/beautifulpermutation.cpp][code]]
 
 ** CF :: Three Logos                                                   :impl:complete_search:
-SCHEDULED: <2026-11-16 Mon>
+SCHEDULED: <2026-11-22 Sun>
 :PROPERTIES:
 :RESULT:   guided
 :TIME:     60+m
 :FELT:     4
+:END:
+:LOGBOOK:
+- Rescheduled from "[2026-11-16 Mon]" on [2026-11-17 Tue 23:53]
 :END:
 [[file:cf/threelogos.org][notes]] | [[file:cf/threelogos.cpp][code]]
 
@@ -194,11 +203,15 @@ SCHEDULED: <2026-11-21 Sat>
 - Insight :: You have to try considering some remembered value as occurring after every mark and then count the possible starts as a result, and see if the number coincides with the number of recalled values. If there are ~r~ recalled values, and some possible start is reachable from ~r~ recalled values, that means that this possible start is valid and all recalled values coincide with this.
 
 ** USACO :: Out of Place                                               :technique:greedy:
-SCHEDULED: <2026-11-17 Tue>
+SCHEDULED: <2026-12-02 Wed>
 :PROPERTIES:
 :RESULT:   editorial
 :TIME:     30m
 :FELT:     2
+:END:
+:LOGBOOK:
+- Rescheduled from "[2026-11-18 Wed]" on [2026-11-18 Wed 09:36]
+- Rescheduled from "[2026-11-17 Tue]" on [2026-11-17 Tue 23:52]
 :END:
 [[file:usaco/outofplace.org][notes]] | [[file:usaco/outofplace.cpp][code]]
 
