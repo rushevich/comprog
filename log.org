@@ -71,11 +71,14 @@ SCHEDULED: <2026-11-25 Wed>
 [[file:usaco/crossroad2.org][notes]] | [[file:usaco/crossroad2.cpp][code]]
 
 ** USACO :: Cow Guessing                                               :observation:topic:
-SCHEDULED: <2026-11-19 Thu>
+SCHEDULED: <2026-12-03 Thu>
 :PROPERTIES:
 :RESULT:   hint
 :TIME:     40m
 :FELT:     4
+:END:
+:LOGBOOK:
+- Rescheduled from "[2026-11-19 Thu]" on [2026-11-19 Thu 16:34]
 :END:
 [[file:usaco/guessanimal.org][notes]] | [[file:usaco/guessanimal.cpp][code]]
 

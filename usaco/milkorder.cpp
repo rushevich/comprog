@@ -21,9 +21,11 @@ int main() {
     cin >> nCows >> nHierarchy >> nSpecific;
 
     vector<int> hierarchy(nHierarchy);
+    bool cow1_present{false};
     for (auto& h : hierarchy) {
         cin >> h;
         --h;
+        cow1_present |= h == 0;
     };
 
     vector<pair<int, int>> spec_pos(nSpecific);
@@ -39,6 +41,33 @@ int main() {
         cows[pos] = cow;
         placed[cow] = pos;
     }
+
+    auto place = [&cows, &placed, &hierarchy, nCows](bool going_right) mutable {
+        if (placed[0] != -1) return;
+        int i{going_right ? 0 : nCows - 1};
+        const int bound{going_right ? nCows : -1};
+        const int shift = going_right ? 1 : -1;
+        if (going_right) reverse(all(hierarchy));
+        int cow{hierarchy.back()};
+        for (; i != bound; i += shift) {
+            if (placed[cow] != -1) {
+                i = placed[cow];
+                hierarchy.pop_back();
+                if (hierarchy.empty()) break;
+                cow = hierarchy.back();
+            } else {
+                if (cows[i] != -1) continue;
+                placed[cow] = i;
+                cows[i] = cow;
+                hierarchy.pop_back();
+                if (hierarchy.empty() || cow == 0) break;
+                cow = hierarchy.back();
+            }
+        }
+        if (placed[0] == -1) placed[0] = find(all(cows), -1) - begin(cows);
+    };
+    place(cow1_present); /* if cow 1 is present, we go right */
+    cout << placed[0] + 1 << '\n';
 }
 
 void solve() {}

@@ -3,7 +3,7 @@
 
 * Explanation
 # The solution in your own words, written after closing the editorial.
-
+The most yes’ that can be said is related to the highest intersection of traits any pair of animals has. When disambiguating this pair, there will be K yes’ said where K is the number of intersecting traits, and then 1 more yes to disambiguate. So the answer is K + 1.
 * Insight
 The max amount of questions you can ask before reaching a one guess situation is the max amount of overlapping traits between a pair of animals
 
