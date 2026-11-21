@@ -161,11 +161,14 @@ SCHEDULED: <2026-11-22 Sun>
 [[file:cf/threelogos.org][notes]] | [[file:cf/threelogos.cpp][code]]
 
 ** CF :: 1130 Div 2 - Swap for k-th Largest Prefix MEX                 :impl:complete_search:
-SCHEDULED: <2026-11-20 Fri>
+SCHEDULED: <2026-11-23 Mon>
 :PROPERTIES:
 :RESULT:   upsolved
 :TIME:     60m
 :FELT:     4
+:END:
+:LOGBOOK:
+- Rescheduled from "[2026-11-20 Fri]" on [2026-11-20 Fri 15:28]
 :END:
 [[file:cf/kthprefixmex.org][notes]]
 
